@@ -29,22 +29,19 @@ const Reviews = () => {
   return (
     <>
       {isLoading && <Loader />}
-      {reviews.length === 0 ? (
-        <p>We don't have any reviews for this movie</p>
-      ) : (
-        <ul className={css.reviewBox}>
-          {reviews.map(({ author, content, id }) => {
-            return (
-              <li key={id}>
-                <p>{author}</p>
-                <p className={css.reviewText}>{content}</p>
-              </li>
-            );
-          })}
-        </ul>
+      {error && (
+        <p>Sorry, an error occurred! Error: {error} Please try again later!</p>
       )}
-
-      {/* )} */}
+      <ul className={css.reviewBox}>
+        {reviews.map(({ author, content, id }) => {
+          return (
+            <li key={id}>
+              <p>{author}</p>
+              <p className={css.reviewText}>{content}</p>
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
