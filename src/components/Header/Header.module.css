@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #3a9ac0;
+  color: burlywood;
+  box-shadow: 2px 4px 8px 2px #925b36;
+  text-shadow: 1px 1px 1px #43456d;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  column-gap: 30px;
+}
+
+.navLink {
+  color: burlywood;
+  transition: color 250ms ease;
+}
+.navLink:hover {
+  color: #d15b0d;
+}
