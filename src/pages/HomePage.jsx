@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { fetchPopularMovies } from 'services/api';
 import { Loader } from 'components/Loader/Loader';
-// import css from './pageStyles/HomePage.module.css';
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
