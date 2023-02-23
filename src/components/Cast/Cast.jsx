@@ -34,8 +34,7 @@ const Cast = () => {
         <p>Sorry, an error occurred! Error: {error} Please try again later!</p>
       )}
       <ul className={css.actorList}>
-        {actors.map(({ id, original_name, profile_path }) => {
-          console.log(profile_path);
+        {actors.slice(0, 10).map(({ id, original_name, profile_path }) => {
           return (
             <li className={css.actorBox} key={id}>
               {profile_path && (
@@ -46,7 +45,7 @@ const Cast = () => {
                 />
               )}
 
-              <p>{original_name}</p>
+              <p className={css.actorName}>{original_name}</p>
             </li>
           );
         })}

@@ -26,6 +26,5 @@ export const fetchMovieByQuery = async query => {
   const { data } = await axios.get(
     `/search/movie?query=${query}&api_key=${API_KEY}`
   );
-  console.log(data);
   return data;
 };

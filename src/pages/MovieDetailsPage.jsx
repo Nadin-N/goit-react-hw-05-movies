@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useParams, useLocation } from 'react-router-dom';
+import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/api';
 
 import { MovieDetails } from 'components/MovieDetails/MovieDetails';
@@ -41,7 +41,7 @@ function MovieDetailsPage() {
       )}
       <>
         <div className={css.buttonBack}>
-          <NavLink to={goBackLink}>Go back</NavLink>
+          <Link to={goBackLink}>Go back</Link>
         </div>
         <MovieDetails
           posterPath={movie.poster_path}
@@ -54,17 +54,14 @@ function MovieDetailsPage() {
           <h3>Additional information</h3>
           <ul>
             <li>
-              <NavLink to="cast" state={{ from: location?.state?.from ?? '/' }}>
+              <Link to="cast" state={{ from: location?.state?.from ?? '/' }}>
                 Cast
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
-                to="reviews"
-                state={{ from: location?.state?.from ?? '/' }}
-              >
+              <Link to="reviews" state={{ from: location?.state?.from ?? '/' }}>
                 Reviews
-              </NavLink>
+              </Link>
             </li>
           </ul>
           <Outlet />

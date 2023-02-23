@@ -21,6 +21,8 @@ nav {
   color: burlywood;
   transition: color 250ms ease;
 }
+
+.navLink:focus,
 .navLink:hover {
   color: #d15b0d;
 }
